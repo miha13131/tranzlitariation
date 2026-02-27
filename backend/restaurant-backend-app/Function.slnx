@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/dnapp/" />
+  <Folder Name="/dnapp/lambdas/" />
+  <Folder Name="/dnapp/lambdas/sign-up-api-handler/">
+    <Project Path="dnapp/lambdas/sign-up-api-handler/Function.csproj" />
+  </Folder>
+</Solution>
