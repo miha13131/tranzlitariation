@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "AhimRf591Vw=",
+  "success": true,
+  "projectFilePath": "E:\\RestaurantApp\\restaurant-app\\backend\\restaurant-backend-app\\dnapp\\lambdas\\role-assignment-handler\\Function.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\miha1\\.nuget\\packages\\amazon.lambda.cognitoevents\\2.0.0\\amazon.lambda.cognitoevents.2.0.0.nupkg.sha512",
+    "C:\\Users\\miha1\\.nuget\\packages\\amazon.lambda.core\\2.2.0\\amazon.lambda.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\miha1\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.2.0\\amazon.lambda.serialization.systemtextjson.2.2.0.nupkg.sha512",
+    "C:\\Users\\miha1\\.nuget\\packages\\awssdk.cognitoidentityprovider\\4.0.5.2\\awssdk.cognitoidentityprovider.4.0.5.2.nupkg.sha512",
+    "C:\\Users\\miha1\\.nuget\\packages\\awssdk.core\\4.0.3.15\\awssdk.core.4.0.3.15.nupkg.sha512",
+    "C:\\Users\\miha1\\.nuget\\packages\\awssdk.dynamodbv2\\4.0.7.1\\awssdk.dynamodbv2.4.0.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
