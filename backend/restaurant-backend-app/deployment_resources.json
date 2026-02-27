@@ -14,7 +14,9 @@
             "dynamodb:DeleteItem",
             "ssm:PutParameter",
             "ssm:GetParameter",
-            "kms:Decrypt"
+            "kms:Decrypt",
+            "cognito-idp:AdminAddUserToGroup",
+            "cognito-idp:CreateGroup"
           ],
           "Effect": "Allow",
           "Resource": "*"
@@ -23,11 +25,6 @@
       "Version": "2012-10-17"
     },
     "resource_type": "iam_policy",
-    "tags": {}
-  },
-  "waiters": {
-    "resource_type": "dynamodb",
-    "hash_key": "email",
     "tags": {}
   },
   "restaurant_api": {
@@ -100,6 +97,14 @@
           "default_error_pattern": true
         }
       }
+    }
+  },
+  "waiters-list-table": {
+    "resource_type": "dynamodb",
+    "hash_key": "email",
+    "tags": {},
+    "attributes": {
+      "email": "S"
     }
   }
 }

@@ -1,0 +1,37 @@
+{
+  "version": "1.1",
+  "name": "post-confirmation-role-assignment-handler",
+  "func_name": "PostConfirmationRoleAssignmentHandler::PostConfirmationRoleAssignmentHandler.Function::HandleAsync",
+  "resource_type": "lambda",
+  "iam_role_name": "post-confirmation-role-assignment-handler-role",
+  "runtime": "dotnet8",
+  "memory": 128,
+  "timeout": 30,
+  "lambda_path": "lambdas\\post-confirmation-role-assignment-handler",
+  "dependencies": [
+    {
+      "resource_name": "waiters-list-table",
+      "resource_type": "dynamodb"
+    }
+  ],
+  "event_sources": [
+    {
+      "resource_type": "cognito_post_confirmation_trigger",
+      "batch_size": 1
+    }
+  ],
+  "env_variables": {
+    "WAITER_TABLE_NAME": "waiters-list-table",
+    "WAITER_GROUP_NAME": "WAITER",
+    "CUSTOMER_GROUP_NAME": "CUSTOMER"
+  },
+  "deploy_stage": "api",
+  "architectures": [
+    "x86_64"
+  ],
+  "publish_version": true,
+  "alias": "${lambdas_alias_name}",
+  "url_config": {},
+  "ephemeral_storage": 512,
+  "tags": {}
+}
