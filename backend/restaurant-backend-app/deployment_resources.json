@@ -25,6 +25,11 @@
     "resource_type": "iam_policy",
     "tags": {}
   },
+  "waiters": {
+    "resource_type": "dynamodb",
+    "hash_key": "email",
+    "tags": {}
+  },
   "restaurant_api": {
     "resource_type": "api_gateway",
     "deploy_stage": "api",
