@@ -27,7 +27,7 @@
     "tags": {}
   },
   "waiters-list": {
-    "resource_type": "dynamodb",
+    "resource_type": "dynamodb_table",
     "hash_key": "email",
     "tags": {}
   },
