@@ -156,7 +156,7 @@ namespace SignInApiHandler
                 var refreshToken = authResponse.AuthenticationResult?.RefreshToken;
 
                 var finalUsername = body.email;
-                var finalRole = "CUSTOMER";
+                var finalRole = "Customer";
                 if (!string.IsNullOrEmpty(idToken))
                 {
                     var handler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
