@@ -5,7 +5,6 @@ using Amazon.CognitoIdentityProvider;
 using Amazon.CognitoIdentityProvider.Model;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
-using Amazon.Lambda.CognitoEvents;
 using Amazon.Lambda.Core;
 
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
@@ -37,7 +36,7 @@ public class Function
         _cognitoClient = cognitoClient;
     }
 
-    public async Task<CognitoPostConfirmationEvent> FunctionHandler(CognitoPostConfirmationEvent cognitoEvent, ILambdaContext context)
+    public async Task<PostConfirmationEvent> FunctionHandler(PostConfirmationEvent cognitoEvent, ILambdaContext context)
     {
         if (cognitoEvent == null)
         {
@@ -89,4 +88,19 @@ public class Function
         var value = Environment.GetEnvironmentVariable(key);
         return string.IsNullOrWhiteSpace(value) ? defaultValue : value.Trim();
     }
+}
+
+
+public class PostConfirmationEvent
+{
+    public string UserName { get; set; } = string.Empty;
+
+    public string UserPoolId { get; set; } = string.Empty;
+
+    public PostConfirmationRequest? Request { get; set; }
+}
+
+public class PostConfirmationRequest
+{
+    public Dictionary<string, string>? UserAttributes { get; set; }
 }
