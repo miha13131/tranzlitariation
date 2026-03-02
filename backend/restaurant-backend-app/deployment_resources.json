@@ -27,8 +27,8 @@
     "tags": {}
   },
   "waiters-list": {
-    "resource_type": "dynamodb",
-    "hash_key": "email",
+    "resource_type": "dynamodb_table",
+    "hash_key_name": "email",
     "tags": {}
   },
   "restaurant_api": {

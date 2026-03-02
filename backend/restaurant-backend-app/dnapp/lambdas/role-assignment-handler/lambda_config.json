@@ -11,7 +11,7 @@
   "dependencies": [
     {
       "resource_name": "waiters-list",
-      "resource_type": "dynamodb"
+      "resource_type": "dynamodb_table"
     }
   ],
   "event_sources": [
